@@ -1,0 +1,27 @@
+{
+  "name": "node-rtmp",
+  "version": "0.0.1",
+  "description": "An RTMP Server implement by pure NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha "
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gtlbupt/node-rtmp.git"
+  },
+  "keywords": [
+    "rtmp"
+  ],
+  "author": "gaotianlong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gtlbupt/node-rtmp/issues"
+  },
+  "homepage": "https://github.com/gtlbupt/node-rtmp",
+  "dependencies": {
+    "amf": "^0.1.0",
+    "debug": "^2.1.0",
+    "stream-parser": "^0.3.0"
+  }
+}
