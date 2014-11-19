@@ -2,7 +2,7 @@
 var RTMP = require('../');
 console.dir(RTMP);
 var port = 1935;
-var server = RTMP.createServer(null,  function(nc){
+var server = RTMP.createServer({isEdge: true},  function(nc){
 	nc.accept();
 	nc.on('createStream', function(ns){
 		console.log("createStream");
