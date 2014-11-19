@@ -6,9 +6,9 @@ var server = RTMP.createServer(null,  function(nc){
 	nc.accept();
 	nc.on('createStream', function(ns){
 		console.log("createStream");
-		ns.on('publish', function(){
+		ns.on('publish', function(args){
 			console.log("publish");
-			ns.acceptPublish();	
+			ns.acceptPublish(args);	
 		});	
 		ns.on('play', function(){
 		});
