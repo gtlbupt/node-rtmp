@@ -1,9 +1,9 @@
-
-var RTMPServer = require('../').RTMPServer;
-var server = new RTMPServer();
+'use strict'
+var RTMP = require('../');
+console.dir(RTMP);
 var port = 1935;
-server.on('connect', function(nc){
-	nc.accept();	
+var server = RTMP.createServer(null,  function(nc){
+	nc.accept();
 	nc.on('createStream', function(ns){
 		console.log("createStream");
 		ns.on('publish', function(){
@@ -14,6 +14,6 @@ server.on('connect', function(nc){
 		});
 	});
 });
-server.listen(port, function(){
+server.listen(port, '0.0.0.0', 511, function(){
 	console.log("RTMPServer listen at port: ", port);
 });

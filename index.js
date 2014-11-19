@@ -1,2 +1,2 @@
 
-exports.RTMPServer = require('./lib/server').RTMPServer;
+exports.createServer = require('./lib/server').createServer
