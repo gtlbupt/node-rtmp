@@ -1,16 +1,16 @@
 'use strict'
 var RTMP = require('../');
-console.dir(RTMP);
 var port = 1935;
-var server = RTMP.createServer({isEdge: true},  function(nc){
+var server = RTMP.createServer({isEdge: false},  function(nc){
 	nc.accept();
 	nc.on('createStream', function(ns){
-		console.log("createStream");
 		ns.on('publish', function(args, hasPublish){
 			console.log("publish args[%s] hasPublish[%d]", JSON.stringify(args), hasPublish);
 			ns.acceptPublish(args);	
 		});	
-		ns.on('play', function(){
+		ns.on('play', function(args){
+			console.log("publish args[%s] hasPublish[%d]", JSON.stringify(args));
+			ns.acceptPlay(args);
 		});
 	});
 });
