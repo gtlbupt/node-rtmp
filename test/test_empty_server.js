@@ -4,7 +4,7 @@ var port = 1935;
 var opts = {
 	isEdge: true,
 	edge :{
-		origin_servers: [{host: 'cp01-wise-2011q4ecom05.cp01.baidu.com', port: 8935}],
+		origin_servers: [{host: '10.95.35.34', port: 8935}],
 	},
 };
 var server = RTMP.createServer(opts, function(nc){
