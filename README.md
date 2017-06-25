@@ -8,7 +8,7 @@ An RTMP Server implemented by pure NodeJS.
 
 extended-timestamp issue: https://code.google.com/p/red5/issues/detail?id=107
 
-When test with 1 publisher, 1000 subscribers, bandwidth : 400 Mbps, 99.29%'s time is spend on write system call.  
+When test with 1 publisher, 1000 subscribers, bandwidth : 400 Mbps, 99.29%'s time is spent on write system call.  
 From https://github.com/winlinvip/simple-rtmp-server/issues/194, we can see that writev can improve the performance.  
 
 ~/st-load$ sudo strace -p 19869 -c  
